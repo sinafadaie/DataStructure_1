@@ -1,0 +1,21 @@
+Big O notation is a mathematical notation that describe the limiting
+behavior of a function when the argument tends towards a particular value or infinity!
+
+it wants to describe how a algorithm work on large data set,
+we want to find out the algorithm is SCALABLE ?
+an "Array" is good on finding element, bad on resizing
+a  "link-list" is good on resizing, bad on finding element!
+we need a concept to compare these difference.
+
+O(1)
+it means the algorithm has "CONSTANT" time
+(it could be large time and different on separate machines)
+but th time will not change based on size of data.
+
+public void log (int[] numbers){
+    System.out.println(numbers[0])      // the runtime complexity of this method is O(1)
+}
+
+Note: if we print more elements,
+      the runtime will increase, but it remain constant         //System.out.println(numbers[0])
+      so it will remain O(1)                                    //System.out.println(numbers[1])

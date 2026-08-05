@@ -1,0 +1,36 @@
+ Arrays store list of items (objects & primitives)
+ these items store sequentially in memory.
+ for example we want to store integer (we know integer is 4 bytes)
+
+ imagine the address of first item on memory is 100
+ the second item will store on                  104
+ the third item will store on                   108
+
+
+Note: that's the reason we can find easily each item "O(1)"
+      because the address of each item is predictable
+      (the address of 20th item is 180!)
+
+Note: that's the reason in arrays
+      we just can store one type!
+      each item should have same size!
+
+Note: Arrays in JAVA is "STATIC"
+      it means when we are allocate them, we should specify their size
+      (it means they have not dynamic size on RAM, the size is static, prefix)
+      (in python Arrays are dynamic!)
+      so in bad scenario, when we are inserting, the array has not enough size
+      he has to copy all element on another bigger array
+      so inserting is O(n)
+
+Note: if we want to delete last item, it just O(1)
+      but in bad scenario, if we want to delete first item
+      whole list should shift left!
+      so deleting id O(n)
+
+Note: when our list size change rapidly,
+      we should use LINK-LIST
+
+LOOKUP --> O(1)
+insert --> O(n)
+delete --> O(n)

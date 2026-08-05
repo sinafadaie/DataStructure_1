@@ -1,0 +1,36 @@
+we want to create a "DynamicArray" from scratch!
+we want simulate "dynamic" Array (insert more item rather than current size!
+                                  it automatically grow
+                                  it automatically shrink)
+
+it has some method:
+                   insert()
+                   removeAt()
+                   indexOf()
+                   print()
+
+
+Note: insert()   is O(n)
+                      in the increaseSize scenario
+                      he need a loop on every elements
+      removeAt() is O(n)
+                      in the worst shift scenario we need move all element O(n)
+                      when we need decrease the size we have O(n)
+                      O(2n) = O(n)
+      indexOf()  is O(n)
+                      to find the index we need explore all element
+      print()    is O(n)
+                      we need loop on each element
+
+
+Note: it get the size of array
+      from constructor, and the future size
+      will created based on this size.
+
+----------------------------------
+we have short syntax for creating Arrays in JAVA
+
+    int[] x = new int[3];               int[] x = {10,2,7}      //it's create the Array
+    x[0]=10;                                                    //with size of "3"
+    x[1]=2;
+    x[2]=7;

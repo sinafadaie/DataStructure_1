@@ -1,0 +1,25 @@
+in pre lesson we create a dynamic array from scratch!
+
+but java develop them as "ARRAY-LIST" & "VECTOR"
+both of them like our DynamicArray class use "ordinary java array" under the hood!
+they have 2 difference
+
+1. ARRAY-LIST increase 50% when he need grows
+   VECTOR increase 100% when he need grows
+
+2. VECTOR is "synchronized"
+   it means just one thread can touch VECTOR obj simultaneously
+   but ARRAY-LIST obj can touched by multiple thread simultaneously.
+
+Note: ARRAY-LIST is more usual,
+      because it doesn't waste memory (50%)
+      because it support multi thread!
+
+    var list = new ArrayList<Integer>();
+    list.add(1);                    //like  insert()
+    list.add(2);
+    list.add(3);
+    list.remove(0);                 //like  removeAt()
+    list.indexOf(2);                //like  indexOf()
+
+    list.toArray();                 //return underhood Array!

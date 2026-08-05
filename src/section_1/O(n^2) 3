@@ -1,0 +1,56 @@
+simple loop was O(n),
+but what is NESTED LOOP?
+
+    for (int first:numbers) {           //the runtime complexity is O(n^2)
+        for(int second:numbers){
+            System.out.println(first + "," + second);
+        }
+    }
+
+Note: How many execution we have?
+      for each element we execute n times, we have n element
+      so we execute n*n times!
+      O(n^2)
+
+Note: REMEMBER AS GOLD RULE
+      we use "*" when we have nested cost
+      we use "+" when they are separate execution
+
+---------------------------------
+
+    public void log(int[] numbers, int[] names) {   //O(n^3)
+
+        for (int first:numbers) {                   //O(n)
+            for(int second:numbers){                //O(n)
+                for(int third:numbers){             //O(n)
+                    System.out.println(first + "," + second + "," + third);
+                }
+            }
+        }
+    }
+
+Note: we have nested O(n), so we use multiply
+      O(n*n*n) = O(n^3)
+
+---------------------------------
+
+    public void log(int[] numbers, int[] names) {   //O(n^2)
+
+        for (int first:numbers) {           //O(n)
+            System.out.println(first);
+        }
+
+        for (int first:numbers) {           //O(n^2)
+            for(int second:numbers){
+                System.out.println(first + "," + second);
+            }
+        }
+    }
+
+
+Note: in big O notation, we just use the big term (it's big O)
+      due to simplicity, we remove the smaller parts
+      THE BIG O WANT TO SHOW THE "ORDER" OF FUNCTION
+
+      O(n+n^2) = O(n^2)
+      O(n+n^2+n^3) = O(n^3)

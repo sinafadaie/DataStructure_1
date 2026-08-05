@@ -1,0 +1,39 @@
+in ideal world we want to super fast and minimum amount of memory (RAM)!
+but we have trade of most of the time.
+some times we have more space, so we optimize algorithm and make them fast,
+some time we have limited space, like when we have app for a small mobile device!
+so we will optimize for the space (scalability is not big factor, we have just 1 user for the app)
+
+Note: the backend and sdk difference is here
+      it's time and space!
+      Big O can used for time, can used for space!
+      in this course we use it for time!
+      because it has more challenge.
+      but you can use the idea to optimize the memory.
+
+Note: when we talk about space complexity,
+      we only look at the "additional" space (input is not the matter!)
+      that we should allocate relative to th size of the input
+
+
+
+
+
+public void log(int[] numbers) {            //the space complexity is O(1)   (just have a single i)
+                                            //the runtime complexity is O(n)
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+    }
+
+-------------------------------
+
+public void log(int[] numbers) {            //the space complexity is O(n)
+                                            //the runtime complexity is O(n)
+
+        int[] copy = new int[numbers.length];           //O(n)
+
+        for (int i = 0; i < numbers.length; i++) {      //O(1)
+            System.out.println(numbers[i]);
+        }
+    }

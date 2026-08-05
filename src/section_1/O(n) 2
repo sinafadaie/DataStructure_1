@@ -1,0 +1,62 @@
+imagine we have simple LOOP
+the execution will depend on size of data!
+the number of operations depend on number of data.
+
+
+for (int i = 0; i < numbers.length; i++) {
+          System.out.println(numbers[i]);   //the runtime complexity is O(n)
+    }
+ }
+
+Note: the cost of this algorithm grows "LINEARLY"
+      and in direct correlation to size of the input.
+      (n is size of input)
+
+----------------------------------
+
+public void log(int[] numbers) {            //the runtime complexity is O(n)
+
+    System.out.println("1");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+        System.out.println("2");
+    }
+
+Note: the constant will remove,
+      it is still linear method
+      O(1+n+1) = O(n)
+
+----------------------------------
+
+public void log(int[] numbers) {            //the runtime complexity is O(n)
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+    }
+
+Note: the constant will remove,
+      it is still linear method
+      O(n+n) = O(2n) = O(n)
+
+-----------------------------------
+
+public void log(int[] numbers, int[] names) {   //the runtime complexity is O(n)
+
+    for (int j = 0; j<names.length; j++){
+       System.out.println(names[j]);
+    }
+    for (int i = 0; i < numbers.length; i++) {
+       System.out.println(numbers[i]);
+    }
+
+}
+
+Note: it still linear
+      O(n+m) = O(n)
+

@@ -1,0 +1,27 @@
+the worst one is exponential! O(2^n)
+it's exactly opposite of log n (based on y=x)
+it's so slow and not scalable!
+
+
+2^x is inverse of log2(x)
+e^x is inverse of ln(x)
+10^x is inverse of log10(x)
+
+Note: in computer sciences, we usually use 2
+      as index of log
+      log n = log 2(n)
+
+y
+^
+|
+|                                    /
+|                                   /
+|                                  /
+|                                _/
+|                              _/
+|                           __/
+|                        __/
+|                     ___/
+|                  ___/
+|__________________/
++--------------------------------------------> n

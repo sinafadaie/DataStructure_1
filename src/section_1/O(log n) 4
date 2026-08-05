@@ -1,0 +1,19 @@
+we have logarithmic growth in algorithms where
+we reduce our work by half in every step!
+like binary search, it make it so FAST and SCALABLE!
+(it's better that linear!)
+
+y
+^
+|
+|                           _________
+|                      ____/
+|                  ___/
+|               __/
+|            __/
+|         __/
+|      __/
+|    _/
+|  _/
+|_/
++--------------------------------------------> n
