@@ -1,0 +1,29 @@
+we have two type of linked list
+1.SINGLY
+2.DOUBLY
+
+we implement the singly linked list
+in doubly linked list, each node has both next and pre node reference
+they are bidirectional!
+
+Note: the whole goal of "DOUBLY" linked-list
+      is make delete last item runtime complexity to O(1)
+
+Note: the "DOUBLY" linked-list
+      need to store more data on each node
+      so he has bigger footprint than singly footprint.
+
+Note: JAVA linked-list class is "DOUBLY" !
+      so "removeLast()" method from LinkedList is O(1)
+
+
+
+CIRCULAR LINKED-LIST
+both singly and doubly linked-list can be circular,
+in singly linked list, last node should have a pointer to first node
+in doubly linked list, last node should have a pointer to first node
+                       first node should have a pointer to last node
+
+Note: circular linked-list used for some list
+      like play list, when we want to replay the list from beginning
+      when we want to iterate on the list!

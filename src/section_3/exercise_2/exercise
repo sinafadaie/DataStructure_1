@@ -1,0 +1,24 @@
+we want to implement a linked list class from scratch!
+in LinkedList class we just need to store two node (first/last)
+all other node link them by themselves!
+
+Note: we create a linked list from scratch,
+      but in dynamic arrays, we used the java array under the hood,
+      that's because we need arrays element stick together on RAM,
+      but in linked list, it just distributed on RAM.
+      how we could implement static array manually?
+                                                    in JAVA we can not manage raw memory!
+                                                    in C we can, but in java, JVM do this!
+                                                    JVM managed the HEAP!
+                                                    so JVM declare continue memory on HEAP.
+                                                    so we can not implement arrays from scratch!
+
+Note: we use "node.getNext() != null"
+      on our loop, so the last one is not checked in loop
+      we have to write extra line to handle it
+      MOSH use "node != null" condition
+      so he has not that problem!
+
+Note: we can traverse the list to find size O(n)
+      but we implement it by O(1)
+

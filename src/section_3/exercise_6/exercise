@@ -1,0 +1,28 @@
+it's common question in interview
+how you implement a method to reverse a singly linked-list?
+we have "reverse()" method on LinkedList JAVA class for this.
+
+1->2->3
+3->2->1
+
+Note: we have just single while loop
+      so it is O(1)
+      but we could use bad algorithm like two nested loop
+      one read from beginning, one write from end
+      that method runtime complexity will be O(n^2)
+
+Note: java link-list "reverse()"
+      does not return any thing!
+      it reverse the link-list inplace!
+      he just update the pre/next pointers.
+
+Note: we have a concept in clean code as ADD (Attention Deficit Disorder)
+      even senior developers don't use it.
+      ADD want to make people attention on one thing, one logic.
+      I have not this on current code!
+      ADD want to make lines stick together without any noise
+      based on specific logic.
+      when some lines are implement a logic, we should not bring some relevant lines
+      like some variable and ...
+      we should able to divide our code in some area that have same logic
+      NO EXTRA NOISE!

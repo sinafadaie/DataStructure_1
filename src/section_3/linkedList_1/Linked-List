@@ -1,0 +1,78 @@
+we use linked-list to store obj in sequence.
+but unlike arrays, linked-list can grow and shrink automatically.
+we call the first node as "HEAD"
+we call the last node as "TAIL"
+each node store next node reference.
+and we have two pointer on first and last node
+
+Note: we have a head pointer on first node as head   (it's like git, git commits are linked_list)
+      we have a tail pointer on last node as tail!
+      but we can not use tail pointer to travers the list!
+      the list is one direction.
+
+Note: git commit as node of linked-list are immutable
+      (we can not update the pointer!)
+      but in general nodes are mutable in linked-list.
+
+lookup by value is O(n)
+                      we should travel from head to tail
+                      to find a value
+
+lookup by index  is O(n)
+                      we should traverse the list again
+
+Note: unlike Arrays where items are stored sequentially on RAM
+      (that's because they are static, they need to fix)
+      the Linked_list node can ba all over the place!
+      (that's because they are dynamic)
+
+
+INSERT
+
+insert at the first          O(1)
+                             create the new node
+                             update the head to him
+
+insert at the end is                   O(1)
+                                          create the new node
+                                          (we can find last node by tail)
+                                          update the tail to him
+
+insert at the middle                   O(n)
+                                          find the appropriate node O(n)
+                                          insert the node O(1)
+
+
+DELETE
+
+delete at the first       O(1)
+                          update the head
+                          remove the old pointer (IF WE DON'T REMOVE THE POINTER
+                                                  GARBAGE COLLECTOR WILL NOT REMOVE THIS GARBAGE NODE!)
+
+delete at the end         O(n)
+                          travers to the end O(n)
+                          update the tail
+                          and remove the pointer from pre last node
+                          (make pre last node as last node!)
+
+delete at the end        O(n)
+                         travers to the end O(n)
+
+
+---------------------
+
+LOOKUP --> O(n)
+
+INSERT AT FIRST  --> O(1)
+INSERT AT END    --> O(1)       //in services with huge insert, linked list is good!
+INSERT AT middle --> O(n)
+
+DELETE AT FIRST  --> O(1)
+DELETE AT END    --> O(n)
+DELETE AT middle --> O(n)
+
+Note: middle is always O(n) due to traverse
+      begin and end is always O(1)
+      except delete the end, because we can not find the pre last item from tail
+      we should traverse the list form him!

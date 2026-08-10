@@ -1,0 +1,30 @@
+1. find middle of link list in one pass (just one loop)
+   we don't the size of the linked-list!
+
+Note: even linked list has tow middle
+      odd linked list has one middle
+
+solution: use two extra pointer as firstMiddle & secondMiddle
+          find them on each step!
+
+
+
+
+2. find out if the linked-list has loop or not?
+   loop on linked list means we have a node that has a pointer      N1 -> N2 -> N3 -> N4
+   to some previous nodes!                                                 ^          |
+                                                                           |__________|
+
+Note: in this situation we have not the "LAST" node!
+      all the node has NEXT!
+
+solution: use two extra pointer as slow and fast
+          slow travel the list by 1X
+          fast travel the list by 2X
+          if we have loop on linked list, they will see each other!
+          (if fast get null, we terminate the function!)
+
+Note: if we have the 1X
+      there is not any black hole!
+      they have to see each other.
+      This algorithm is called "Floyd’s Cycle-finding" Algorithm.

@@ -1,0 +1,19 @@
+we want to Kth node from the end
+with just one pass (you have one loop)
+and you have not the "SIZE".
+
+Important Note: many linked list problem solve by
+                adding "TWO EXTRA POINTER"
+
+solution: we introduce two extra pointer p1 & p2
+          then we want to find 3th node from the end
+          we make two node distance between them
+          move these two pointer until the forward pointer reach last node
+          the backward pointer will point to 3th node from the last
+
+          10 -> 20 -> 30 -> 40 -> 50
+                      p1          p2
+
+          k[1] =50
+          k[2] =40
+          k[3] =30

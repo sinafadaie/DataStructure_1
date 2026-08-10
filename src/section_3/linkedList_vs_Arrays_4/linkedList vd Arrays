@@ -1,0 +1,25 @@
+1.Arrays or more accurately static arrays, have a fixed size.
+  so if we don't know the size we should use linkedList (or dynamic array like ArrayList)
+
+Note: dynamic arrays grow by 50%  (Arraylist)
+                     grow by 100% (Vector)
+      so they waste some memory.
+
+Note: linked-list use memory as mush he really need!
+      but he need some extra memory on each node
+      to store next node reference.
+      SO HE HASE BIGGER FOOTPRINT THAN ARRAYS!
+
+
+    +------------------------+-----------+-------------+
+    | Operation              | Array     | Linked List |
+    +------------------------+-----------+-------------+
+    | Lookup by index        | O(1)      | O(n)        |
+    | Lookup by value        | O(n)      | O(n)        |
+    | Insert at beginning    | O(n)      | O(1)        |        Note: we use linked list on heavy insert app
+    | Insert at end          | O(n)      | O(1)        |              it's so fast to add item at the ned!
+    | Insert in middle       | O(n)      | O(n)        |
+    | Delete at beginning    | O(n)      | O(1)        |        Note: we use Arrays when we want to fine item
+    | Delete in middle       | O(n)      | O(n)        |              based on index.
+    | Delete at end          | O(1)      | O(n)        |
+    +------------------------+-----------+-------------+
