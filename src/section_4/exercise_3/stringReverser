@@ -1,0 +1,7 @@
+we want to reverse a string.
+we have     str = "abcd"
+we want           "dcba"
+
+Note: whenever you are dealing with problem that involve
+      going back or doing something in reverse order
+      STACKS are your best friend!

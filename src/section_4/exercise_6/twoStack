@@ -1,0 +1,27 @@
+Implement two stacks based on one array.
+Support these operations:
+
+push1() // to push in the first stack
+push2() // to push in the second stack
+pop1()
+pop2()
+isEmpty1()
+isEmpty2()
+isFull1()
+isFull2()
+
+Make sure your implementation is space efficient.
+hint: do not allocate the same amount of space by dividing the array in half.
+
+solution: one stack start from beginning of array
+          the other stack start from end of array
+          when see each other
+          stackoverflow!
+
+
+Note: we implement two separate stack based on one aray
+      so we can use it for algorithm that need two stack
+      like MinStack
+
+Note: java array does not support negative index!
+      just python support this!

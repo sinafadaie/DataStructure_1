@@ -1,0 +1,16 @@
+Design a stack class that supports push, pop and also
+retrieving the minimum value in "constant time".
+O(1)
+
+For example, we populate our stack with [5, 2, 10, 1] (from left to right).
+stack.min() // 1
+stack.pop()
+stack.min() // 2
+
+solution: we need 2 tack to implement a "min stack"
+          s separate stack to store minimum!
+
+
+Note: if we just define a variable to store min
+      when we "pop", we can not find min!
+      and we need traverse!

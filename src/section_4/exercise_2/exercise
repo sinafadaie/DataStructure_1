@@ -1,0 +1,17 @@
+we want to create a stack data structure from scratch!
+it could be based on an Array or Linked-List!
+it should has push/pop/peek/isEmpty
+
+Note: use static array, not dynamic arrays like ArrayList
+      we want have the challenge that stack is full!
+      fullstack!
+
+Note: we use our Linked-List class
+      we implement in pre section!
+
+Note: when stack is full,
+      Mosh just throw exception (StackOverflowError())
+      it the site!
+      we don't throw it on our implementation
+      but it is standard, stack have size
+      and can get full!

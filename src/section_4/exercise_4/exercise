@@ -1,0 +1,24 @@
+we want to check a expression is balanced or not?
+like compiler check the syntax!
+
+(1+2) is balanced
+((1+2)) is balanced
+([1]+[2]) is balanced
+{[(1+2)-[(1-2)]]} is balanced
+{[(1+2)-[(1-2)]]}[ is not balanced!
+
+Note: the algorithm is when we see close term like "]" or ")" or "}"
+      we should move back, and see if the pre item
+      is related open term or not!
+      remove it then go forward!
+      go back one step means "STACK"
+
+
+Important note: I defined the stack obj out side of balanced method
+                I create just one instance of BalancedExpression on Main
+                so he use just one stack!
+                so I need clear the stack at the top of the method.
+                but in multithread app, we will have problem here!
+                in that situation we should confinement approach
+                we should isolate stack obj in each thread
+                so we can create stack obj inside the method!

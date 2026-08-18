@@ -1,0 +1,44 @@
+think stacks like books on shell!
+you can stack a bunch of books on top each other
+but we can only view or remove the top book!
+if we want first book, we should remove book one by one.
+we call this "LAST IN, FIRST OUT" or "LIFO PRINCIPLE"
+
+
+internally, we use a Array or Linked-List to store the obj in stacks.
+so a Stack is basically a "WRAPPER" around an array or linked-list,
+that gives us a different way of storing and accessing objects (rather than linked-list and arrays
+Stack in Java (java.util) is array based!
+
+
+stacks have 4 operations
+push/pop/peek/isEmpty
+
+important note: the main goal of stack
+                is all functionalities (push/pop/peek/isEmpty)
+                is O(1)
+                even ArrayBasedStack or LinkedListStack
+                all of them is O(1)
+                THIS IS MAIN PROPERTY OF STACK!
+
+Note: we have not any functionalities for search or lookup
+      because stacks is not for that!
+      if you want to search on a stack, think again!
+      MAYBE YOU SHOULD CHANGE DATA STRUCTURE!
+
+we use Stack data structure for
+
+1.implementing "UNDO" feature
+  because we can find pre item immediately
+
+2.implementing compilers to syntax checking
+  like what we do in 4.4 for balanced expressions
+
+3.evaluate arithmetic expressions like calculator
+  because can find the order like (1+2*3)
+
+4.impleting navigations
+  like forward/backward move
+  like forward/backward in browsers
+
+
