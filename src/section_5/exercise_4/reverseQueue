@@ -1,0 +1,15 @@
+when we hear "reverse" we should think about "Stack".
+we create a stack and move queue to it,
+then bring back element from stack to queue.
+the queue is reversed now!
+
+Note: the reverse() method return void,
+      we just pass the address of the queue
+      and update it!
+
+Note: when we use for-each loop
+      we can not modify the object that we are iterating on it!
+      so we use while!
+
+Note: the cost of reverse() is
+      O(n)

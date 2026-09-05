@@ -1,0 +1,40 @@
+we want design queue from scratch,
+it could be based on Array,
+                     Linked-List,
+                     Stack
+
+Array Design
+we need to separate pointer as front of queue
+                           and back of queue
+
+Note: when we are using array
+      some times we need to shift the core array
+      but it is O(n) cost!
+      so the isFull() and and enqueue() methods
+      that use shift() method are O(n)
+      but Queue should be O(1) in all functions!
+      for solve this we use "CycleArray"
+
+
+CYCLE ARRAY
+instead of shifting array, that is O(n)
+we can link the end of array to begging of the array!
+for this we should use "Residual" (%)
+we just need to check the number of item is ok (numberOfItems)!
+to prevent OVERLAP!
+
+the array size is 5 :
+0 -> 0
+1 -> 1
+2 -> 2
+3 -> 3
+4 -> 4
+5 -> 0
+6 -> 1
+7 -> 2
+8 -> 3
+9 -> 4
+10 -> 0
+11 -> 1
+12 -> 2
+

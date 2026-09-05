@@ -1,0 +1,17 @@
+we build a queue by stack earlier (need two stack)
+now we want to build a stack by queue (need two queue)
+
+we use the queue we created in section_5.exercise_2
+that was a array based queue.
+
+the idea is we have two separate queue,
+when we want to find recent item
+we will transfer the full queue to empty queue (so the full queue will be empty)
+and the new queue will be exactly same as the previous queue
+through this transportation, we can find the top value!
+
+add           O(1)
+pop           O(2n) = O(n)
+peek          O(2n) = O(n)
+isEmpty       O(1)
+

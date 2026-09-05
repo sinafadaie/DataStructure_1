@@ -1,0 +1,15 @@
+queues are the sam as real worlds queues, people join from the back
+queues are FIFO (first in first out)
+
+we use queues when we want to share some resource on some consumers,
+like printers,
+     OS (manage processes),
+     web server (manage income requests)
+
+
+all the main functionalities should be O(1)
+because we just need First & Last item.
+enqueue()           O(1)
+dequeue()           O(1)
+peek()              O(1)
+isEmpty()           O(1)

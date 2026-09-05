@@ -1,0 +1,16 @@
+we want to build priority queue from scratch,
+it could be based on "array" or "heap".
+we will see heap later, so we implement it  by array.
+(the queue is order item based on values, smallest is frontest)
+
+Note: in the priority queue, enqueue is always O(n)
+      because he need to sort the data!
+      but dequeue should be O(1)
+      but in our implementation, dequeue is O(n)
+      because we use shiftLeft()
+      (to make it O(1), we should use Cycle-Array)
+
+
+Note: it is cristal clear
+      when we want to shift a array to "right", we should start from "right" (end of the list)
+      when we want to shift a array to "left" , we should strat from "left"  (beginning of the list)

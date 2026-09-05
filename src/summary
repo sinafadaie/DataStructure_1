@@ -1,0 +1,54 @@
+two nested loop is O(n^2)
+three nested loop is O(n^3)
+
+Algorithms with running time O(2^N)
+are often "RECURSIVE" algorithms that solve a problem of size N by recursively solving two smaller problems of size N-1.
+like "Towers of Hanoi" problem for N disks
+
+---------------------------
+
+we build a dynamic array like ArrayList from scratch based on static array,
+we can not build static array easily on java, because we can not manipulate memory
+(in python we can, but in java JVM do this)
+
+Arrays are O(1) for find based on index (because of order on memory)
+Arrays are O(n) on insert (in bad scenario)
+Arrays are O(n) on delete (we should rearrange all elements)
+Arrays are O(n) for find based on value
+
+----------------------------
+
+we build a Linked-List from scratch based on nothing!
+we just use some obj that have pointer to next obj
+so they are distributed all over the RAM
+
+Linked-List are O(1) on EDGE elements (inset/delete/find on
+                                       first and last elements)
+Linked-List are O(n) to find (value or index)
+linked-list are O(n) to delete value
+
+Note: delete last item on undirectional linked-list is O(n)
+      because we need to find the item before the last item
+
+-----------------------------
+
+we build stack from scratch based on Arrays and Linked-List
+All the standard functionality of stack is O(1)
+if we use bio direction linked-list under the hood it always be O(1)
+if the stack is resizable (we have not the StackOverFlowException)
+we could have O(n) scenario (when dynamic array is getting resize)
+(if stack is not resizable, it always O(1))
+
+Note: we build a stack by queue in 5.8
+      he need two queue, and it is not optimum!
+
+-----------------------------
+
+we build a queue from scratch based on stack (need two stack)
+                          and based on Array
+                          and based on Linked-List
+all standard functionality of queue is O(1)
+(when use Cycle-Array)
+
+Note: queue based on stack is not optimum
+      all the functionalities will not O(1)

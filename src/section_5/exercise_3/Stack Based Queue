@@ -1,0 +1,27 @@
+My Solution:
+we can use "TWO" stack to implement a queue
+BUT IT IS NOT EFFICIENT! (on best practice is not efficient too
+                          because queue based on cycle-arrays was O(1) on all functionalities)
+
+we have two stack with opposite order!
+when one of them is changed,
+we will build the other (each function!)
+(by mirror() method)
+
+
+Best Practice
+we can use "TWO" stack to implement a queue
+the idea is one stack is just for Enqueue, and we always just add item easily on him!
+so the Enqueue is always O(1).
+we have another stack for Dequeue, when we call Dequeue
+we move all item from Enqueue stack to Dequeue stack by pop (so now the order is reversed)
+now the Enqueue stack is empty and Dequeue stack has some items
+we will add new items to Enqueue stack again
+and we will use Dequeue stack to service the Dequeue service
+when ever Dequeue service get empty, we will move Enqueue stack to Dequeue stack again!
+
+Note: in Objs like Stack,Queue,...
+      that we have "isEmpty"
+      and they designed for entrance and exitance some objs
+      we usually use While instead For
+      ( while(!isEmpty) )
