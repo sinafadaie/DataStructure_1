@@ -1,0 +1,38 @@
+we extract some replicate code to some methods
+getKeyValurPair() & getLinkedList()
+
+
+Note: Mosh used a inner private class
+      for KeyValuePair class.
+      because we just need him on HashMap class.
+
+Note: when we do some refactor on code,
+      in real project we have "AUTOMATING TEST",
+      so we check all functionality of the app by some automating tests.
+
+
+Note: COMMAND QUERY SEPARATION PRINCIPLE (CQS)
+      A method should either do something or return something, but not both.
+      it's more critical on Query methods, when we just want to get some data
+      like getLinkedList, we should not changed the state!
+      we should not have any side effect!
+      (like our getLinkedList() method create new LinkedList when there is not any LinkedList
+       it is not standard!)
+
+     we should not return balance in withdraw(),
+     we should have two separate method for that
+
+     public void withdraw(int amount) {
+         balance -= amount;
+     }
+
+     public int getBalance() {
+         return balance;
+     }
+
+
+Note: ADD problem (Attention Disorder Problem)
+      we should keep related line together
+      we should not define a variable on top of the code
+      then use it end of the code!
+      our code should be focused.

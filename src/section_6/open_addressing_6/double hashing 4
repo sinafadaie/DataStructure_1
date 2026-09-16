@@ -1,0 +1,48 @@
+we see that quadratic probing was solve the cluster problem in linear probing,
+but he could miss some indexes (we could improve it but not solve it)
+double hashing is a function that solve this
+he is not create cluster!
+he is not miss indexes!
+
+newIndex = (h(k) + i * h2(k)) % m
+
+h2(k) : another independent hash function
+        the most useful one is
+        h2(k) = prime - (k % prime)
+
+Note: prime is a prime number (3,4,5,7,11,...)
+      that is smaller than table size (m)
+      there is some complex mathematics under the hood
+      but this function works very well!
+
+
+imagine our hash table use a Array with length of 5
+and we use double hashing for resolve the collisions
+(our hash function is h(k) = k % m)
+[,,,,]
+
+h(k)  = k % m
+
+h2(k) = 3-( k % 3 )    (3 is a prime number smaller than 5)
+
+
+insert k=6,v=A
+               h(6) = 6%5 = 1
+               [,(6,A),,,]
+
+insert k=8,v=B
+               h(8) = 8%5 = 3
+               [,(6,A),,(8,B),]
+
+insert k=11,v=c
+               h(11) = 11%5 = 1
+               the index of 1 is full!
+               h2(11) = 3-(11 % 3 )= 1
+               newIndex = (h(k) + i * h2(k)) % m
+                        = (1 + 1 * 1) % 5           i=1
+                        = 2
+               [,(6,A),(11,C),(8,B),]
+
+Note: this algorithm will spread the  new indexes
+      so he will prevent clusters.
+      and he will not miss any indexes!

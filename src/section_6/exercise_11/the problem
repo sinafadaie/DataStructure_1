@@ -1,0 +1,10 @@
+we want design a HashMap that use linear probe for collisions.
+- put(int, String)
+- get(int)
+- remove(int)
+- size()
+
+
+our code run like a BENZ!
+we write linearProbe()
+so we can change it by another probe technic easily.

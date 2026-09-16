@@ -52,3 +52,18 @@ all standard functionality of queue is O(1)
 
 Note: queue based on stack is not optimum
       all the functionalities will not O(1)
+
+-----------------------------
+
+HashMap used for map a KEY to a Value by O(1)
+we build a HashMap based on an Array  (HashMap always need Arrays)
+we use simple HashFunction to convert key to Array index.
+(we calculate index value based on hash value, they are separate concept)
+we use chaining (nested linked list) for collisions
+all standard functionality of hash map is O(1)
+(put/get/remove)
+
+NOTE: sometimes we have a nested loop O(n^2)
+      and we can use HashTable to make it O(n)
+      (populate the hashtable by a iteration O(n)
+       then access all we want by O(1))

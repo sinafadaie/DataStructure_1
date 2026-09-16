@@ -1,0 +1,40 @@
+if we have collisions, and we want to store items directly on our arrays
+(don't use chaining, in other words don't use nested linked-list)
+we should use open-addressing
+(open a new address on current array)
+
+we have some different ways to do this
+1.linear probing
+2.quadratic probing
+3.double hashing
+
+Note: we use same algorithm, when we want to find the value
+      it means we start from base index, and move to next one (based on the function we used for probing)
+      and check if he is the key or not?
+      like chaining, we should traverse the linked-list,
+      we should chek all index we passed by open addressing.
+      (check by key)
+
+Note: deleting on open addressing should be done carefully,
+      if we just delete some index, and make it null
+      it could be generate some problems.
+      because when we are searching for a key, when we see a null index, our search will terminate
+      (because if we see free index, it means we have not any new key that open addressing
+       need to fill it)
+      so to prevent this problem, when we delete something we fill it by something like "deleted"
+      so on searching, he see this index as not null index and keep searching,
+      but it is free for new insert!
+
+
+Note: if we have a hash function that have not any collision (it is not possible)
+      we can just store values without keys!
+      but in real world due to collisions, we store (k,v) on
+      indexes and linked-list to check the key!
+      in chaining we need key
+      in open addressing we need key
+
+
+summary:
+        linear      : nextIndex = (h(k) + i) % table_size)          i
+        quadratic   : nextIndex = (h(k) + i^2) % table_size         i^2
+        double hash : nextIndex = (h(k) + i * h2(k)) % table_size   i*h2(k)

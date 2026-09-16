@@ -1,0 +1,15 @@
+set is not exactly HashTable!
+it is another data structure,
+he has not any value!
+he just has keys.
+{1,2,3,4}
+
+under the hood, the set can use hashtable
+for implementation
+
+the Set is a data structure,
+that store just unique keys like
+{1,2,3,4}
+(we can not have duplicate!)
+
+Note: the order is not correct on set!

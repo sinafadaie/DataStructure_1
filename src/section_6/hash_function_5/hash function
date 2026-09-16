@@ -1,0 +1,42 @@
+hash-table or hash-map use arrays under the hood.
+in arrays search base on index is O(1),
+hash-table or hash-map have some technic on arrays!
+they want to make search base on some value (the key) as O(1)
+
+if we can map the key to some numeric value,  (hash value)
+and then map this numeric value to a index ,  (index value)
+we can find that key by index!
+
+
+HASH FUNCTION
+hash function is a function that gets a value and maps it to a different kind of value,
+we call this new value as "hash-code" or "hash-value" or "digest"
+in context of data structure, a hash function maps a key value to an index value.
+(hash-value is not always used for DS)
+
+there are so many algorithm to calculate hashes,
+some of them used in CRYPTOGRAPHY, like hashing password on DB.
+so in the context of cryptography this hash value is not index value!
+but in the context of DS, we use hash value to create index value!
+
+
+
+JAVA HASH FUNCTION
+in JAVA, every obj has a method called hashCode().
+it is Object class method.
+this method convert the obj to a hash value.
+it is not on the context of DS, so it is not index value!
+it just a hash value.
+
+the HashMap class that we have in JAVA, use this hash code
+and then it does some extra work to map it to an index value
+
+
+Note: specific classes like String, Integer, ...
+      have override hashCode()
+      they create hash code based on their values.
+      but in general (the hashCode() on Object class)
+      the hash code created based on the addresses of obj.
+      so each obj will have different hash.
+
+

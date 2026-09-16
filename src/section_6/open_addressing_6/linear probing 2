@@ -1,0 +1,48 @@
+LINEAR PROBING
+linear probing means when we have collision
+we use a linear function to find free index.
+like just use:
+newIndex = ( h(k) % m) + i ) % m
+
+h()                   : the hash function
+                        the function that convert our key to some value
+
+m                     : array size (hash table size)
+
+i                     : the umber of try
+                        if we have a collision, at first try i =1
+                        if he is not free, we should check next one (i=2)
+
+h(k) % m              : base index
+                        the index if we have not collision
+                        we will use it
+
+h(k) % m) + i         : just see the next indexes
+
+( h(k) % m) + i ) % m : we need another "%m"
+                        because by +i
+                        we can reach the number above array size
+                        so we should make it array cycle again!
+
+Note:  (h(k) % m) + i ) % m
+      =(h(k) + i) % m)
+      so we use this simple representation!
+      just think about it, it is correct!
+
+
+SEARCHING
+when we want to find the key
+we exactly do the same!
+we use "(h(k) + i) % m)" to find the indexes we should check
+for this key!
+
+
+PROBLEM
+the linear probing has a problem called as "CLUSTER PROBLEM"
+we put all the collisions side by side (because we put the value on next index),
+so we will fill some indexes that are neighbors,
+without any free index between them
+we call these side by side indexes as cluster,
+so if we have a new collision, we need traverse through this cluster!it is costly.
+we need a function that distribute this newIndexes all over the array
+to prevent create this clusters

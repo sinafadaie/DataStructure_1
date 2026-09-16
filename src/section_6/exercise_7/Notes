@@ -1,0 +1,14 @@
+Some Notes:
+
+1.we need a class that store our key/value pairs.
+  so we create KeyValuePaid class. (we need to store the key
+                                    so we can find the right pair when we have collisions)
+
+2.we use a simple Hash Function:
+  key % size
+  but we can use Java HashCode as Hash Function.
+
+3.we use chaining for collisions
+  (use linked-list for collisions)
+  LinkedList<KeyValuePair>
+
